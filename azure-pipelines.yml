@@ -23,9 +23,7 @@ steps:
 - task: CopyFiles@2
   inputs:
     sourceFolder: $(Build.SourcesDirectory)
-    contents: |
-      '**'
-      '!.git/**'
+    contents: '**/*'
     targetFolder: $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
